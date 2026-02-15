@@ -15,5 +15,9 @@ jobs:
         node-version: ${{martrix.node-version}}
       - name: install modules
       run: npm install
-      - name: build project
+      - name: run linter
+      run: npm run eslint
+     - name: run prettier
+      run: npm run ci:format
+     - name: build project
       run: npm run build
