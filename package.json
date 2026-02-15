@@ -1,20 +1,50 @@
 {
-  "name": "ci-cd-mock",
+  "name": "fan-chat",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/mark-pribylnov/CI-CD-mock#readme",
-  "bugs": {
-    "url": "https://github.com/mark-pribylnov/CI-CD-mock/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mark-pribylnov/CI-CD-mock.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "webpack serve",
+    "build": "webpack",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "ci:format": "prettier --check .",
+    "precommit": "npm run lint && prettier --check .",
+    "prepush": "npm run lint && npx validate-branch-name",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/parser": "^7.18.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-unicorn": "^54.0.0",
+    "globals": "^16.5.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.5",
+    "husky": "^9.1.7",
+    "mini-css-extract-plugin": "^2.9.4",
+    "prettier": "^3.7.4",
+    "sass": "^1.97.1",
+    "sass-loader": "^16.0.6",
+    "to-string-loader": "^1.2.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1"
   }
 }
