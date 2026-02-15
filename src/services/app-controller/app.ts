@@ -70,6 +70,7 @@ export default class AppController extends Emitter {
       this.navigation.navigate(path, false);
     }
   };
+
   private handleUsersRecieved = (users: Array<LoginStatus>): void => {
     const isUsersActive = users[0].isLogined;
 

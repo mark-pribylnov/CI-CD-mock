@@ -1,9 +1,5 @@
 module.exports = {
   noInlineConfig: true,
-  noNull: false,
-  // Because the API requires using 'null':
-  // https://github.com/rolling-scopes-school/fun-chat-server/tree/main#:~:text=USER_ACTIVE%22%2C%0A%20%20payload%3A-,null,-%2C%0A%7D
-
   env: {
     browser: true,
     node: true,
@@ -29,6 +25,9 @@ module.exports = {
 
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'unicorn/no-null': 'off',
+    // Because the API requires using 'null':
+    // https://github.com/rolling-scopes-school/fun-chat-server/tree/main#:~:text=USER_ACTIVE%22%2C%0A%20%20payload%3A-,null,-%2C%0A%7D
 
     'import/no-extraneous-dependencies': [
       'error',
