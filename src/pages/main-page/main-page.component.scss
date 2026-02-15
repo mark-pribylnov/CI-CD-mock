@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-of-users__single-user {
+  list-style-type: square;
+}
+
+.list-of-users__active .list-of-users__single-user::marker {
+  color: rgb(0, 193, 0);
+}
+.list-of-users__inactive .list-of-users__single-user::marker {
+  color: rgb(255, 0, 0);
+}
+
+.RSS-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-img {
+  max-width: 20px;
+  border-radius: 10px;
+}

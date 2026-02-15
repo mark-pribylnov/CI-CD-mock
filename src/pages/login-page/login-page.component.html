@@ -1,0 +1,43 @@
+<form class="login-form" action="#" data-login-form>
+  <h3 class="login-form__heading">Log in to chat</h3>
+  <span class="error-message" data-login-form-error></span>
+
+  <div class="input-group" data-input-group>
+    <div class="input-group__input-label-wrapper">
+      <label class="input-group__label" for="first-name-input">Login:</label>
+      <input
+        class="input-group__input"
+        type="text"
+        id="first-name-input"
+        name="first-name"
+        minlength="3"
+        data-first-name-input
+        required
+      />
+    </div>
+    <ul class="input-group__validation-messages" data-validation-messages-list>
+      <li class="input-group__validation-message-single" data-validation-message-single></li>
+    </ul>
+  </div>
+
+  <div class="input-group" data-input-group>
+    <div class="input-group__input-label-wrapper">
+      <label class="input-group__label" for="password-input">Password:</label>
+      <input
+        class="input-group__input"
+        type="password"
+        id="password-input"
+        name="password"
+        minlength="4"
+        data-password-input
+        required
+      />
+    </div>
+    <ul class="input-group__validation-messages" data-validation-messages-list>
+      <li class="input-group__validation-message-single" data-validation-message-single></li>
+    </ul>
+  </div>
+
+  <button class="login-form__submit-button" type="submit" data-login-button>Log in</button>
+</form>
+<button class="about-page-button" type="button" data-about-page-button>About</button>

@@ -1,0 +1,35 @@
+@use 'theme' as *;
+
+:root {
+  font-size: $root-font-size;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Roboto, sans-serif;
+  color: $font-color;
+  background-color: $body-bg-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: currentColor;
+}
+
+#appRoot {
+  margin: 0 auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.error-message {
+  background-color: $error-msg-bg-color;
+  color: $error-msg-text-color;
+}
