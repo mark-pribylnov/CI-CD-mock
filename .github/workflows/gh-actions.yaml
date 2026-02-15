@@ -24,7 +24,7 @@ jobs:
         run: npm run ci:format
 
       - name: run linter
-        run: npm run eslint
+        run: npm run lint
 
       - name: build project
         run: npm run build
