@@ -1,23 +1,30 @@
 name: GitHub Actions
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+
 jobs:
-  JOB-NAME(init):
-  strategy:
-    matrix:
-      node-version: [23.x]
+  any-name-you-want:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [23.x]
+
     steps:
       - uses: actions/checkout@v5
-      - name: Starting Node.js ${{matrix.node-version}}
-      uses: actions/setup-node@v5
-      with:
-        node-version: ${{martrix.node-version}}
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node-version }} # Fixed typo 'martrix'
+
       - name: install modules
-      run: npm install
+        run: npm install
+
+      - name: run prettier
+        run: npm run ci:format
+
       - name: run linter
-      run: npm run eslint
-     - name: run prettier
-      run: npm run ci:format
-     - name: build project
-      run: npm run build
+        run: npm run eslint
+
+      - name: build project
+        run: npm run build
