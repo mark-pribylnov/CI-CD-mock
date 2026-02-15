@@ -142,6 +142,7 @@ export default class AppController extends Emitter {
       isCleanable: false,
     });
   }
+
   private initNavigationListeners() {
     this.addListenerToCustomEvent({
       element: this.navigation,
