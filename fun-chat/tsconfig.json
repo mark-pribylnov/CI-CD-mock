@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext" /* Tells "Use the absolute latest version of the module system." */,
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // DOM.Iterable allowes using [...spread] on querySelectorAll()
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true, // allows to import JSON
+    "esModuleInterop": true // allows to import JSON
+  },
+  "include": [
+    "src/**/*", // Tells TS to look at everything in src
+    "declarations.d.ts",
+    "types/**/*",
+    "routes/**/*"
+  ]
+}
